@@ -1,0 +1,318 @@
+# German translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-07-15 14:41+0300\n"
+"PO-Revision-Date: 2020-07-15 14:42+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: myenv/Lib/site-packages/flask_wtf/file.py:50
+#: myenv/Lib/site-packages/wtforms/validators.py:218
+#: myenv/Lib/site-packages/wtforms/validators.py:258
+msgid "This field is required."
+msgstr ""
+
+#: myenv/Lib/site-packages/flask_wtf/file.py:83
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: myenv/Lib/site-packages/flask_wtf/file.py:88
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:68
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:76
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:109
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:112
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:115
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:118
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:154
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:156
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:290
+msgid "Invalid input."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:355
+msgid "Invalid email address."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:388
+msgid "Invalid IP address."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:430
+msgid "Invalid Mac address."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:465
+msgid "Invalid URL."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:485
+msgid "Invalid UUID."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:515
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/validators.py:547
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/csrf/core.py:98
+#: myenv/Lib/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/csrf/session.py:61
+#: myenv/Lib/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/csrf/session.py:69
+#: myenv/Lib/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/csrf/session.py:74
+#: myenv/Lib/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/ext/appengine/fields.py:87
+#: myenv/Lib/site-packages/wtforms/ext/appengine/fields.py:164
+#: myenv/Lib/site-packages/wtforms/ext/appengine/fields.py:166
+#: myenv/Lib/site-packages/wtforms/ext/django/fields.py:95
+#: myenv/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: myenv/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: myenv/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: myenv/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: myenv/Lib/site-packages/wtforms/fields/core.py:513
+msgid "Not a valid choice"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/ext/dateutil/fields.py:75
+#: myenv/Lib/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:505
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:539
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:546
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:629
+#: myenv/Lib/site-packages/wtforms/fields/core.py:639
+msgid "Not a valid integer value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:705
+msgid "Not a valid decimal value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:732
+msgid "Not a valid float value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:793
+msgid "Not a valid datetime value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:810
+msgid "Not a valid date value"
+msgstr ""
+
+#: myenv/Lib/site-packages/wtforms/fields/core.py:827
+msgid "Not a valid time value"
+msgstr ""
+
+#: templates/index.html:19 templates/todoekle.html:18
+msgid "Yeni Ekle"
+msgstr "Neue hinzufügen"
+
+#: templates/index.html:22 templates/todoekle.html:21
+msgid "Başlık Giriniz"
+msgstr "Titel eingeben"
+
+#: templates/index.html:26 templates/todoekle.html:25
+msgid "İçerik Giriniz"
+msgstr "Inhalt eingeben"
+
+#: templates/index.html:29 templates/todoekle.html:28
+msgid "Ekle"
+msgstr "Hinzufügen"
+
+#: templates/index.html:43
+msgid "Choose your language"
+msgstr "Sprache wählen"
+
+#: templates/index.html:46
+msgid "Turkısh"
+msgstr "Türkisch"
+
+#: templates/index.html:47
+msgid "German"
+msgstr "Deutch"
+
+#: templates/index.html:48
+msgid "Arabic"
+msgstr "Arabisch"
+
+#: templates/index.html:49
+msgid "English"
+msgstr "Englisch"
+
+#: templates/index.html:57
+msgid "Logout"
+msgstr "Ausloggen"
+
+#: templates/index.html:63
+msgid "Yapılacaklar Listesi"
+msgstr "Aufgabenliste"
+
+#: templates/index.html:64
+msgid "Hoşgeldin"
+msgstr "Herzlich willkommen"
+
+#: templates/index.html:73
+msgid "Başlık"
+msgstr "Title"
+
+#: templates/index.html:74
+msgid "İçerik"
+msgstr "İnhalt"
+
+#: templates/index.html:75
+msgid "Durum"
+msgstr "Status"
+
+#: templates/index.html:76 templates/index.html:104
+msgid "Tamamla"
+msgstr "Komplett"
+
+#: templates/index.html:77 templates/index.html:105
+msgid "Sil"
+msgstr "löschen"
+
+#: templates/index.html:78 templates/index.html:106
+msgid "Önemli İşaretle"
+msgstr "Als wichtig markieren"
+
+#: templates/index.html:83 templates/index.html:106
+msgid "Henüz Yapılacak Eklemediniz Üstteki Menüden Ekleyebilirsiniz..."
+msgstr "Sie haben noch keine hinzugefügt."
+
+#: templates/index.html:92
+msgid "Tamamlandı"
+msgstr "Als wichtig markieren"
+
+#: templates/index.html:97 templates/index.html:101
+msgid "Tamamlanmadı"
+msgstr "Unvollständig"
+
+#: templates/login.html:19
+msgid "Kullanıcı Adı :"
+msgstr "Nutzername"
+
+#: templates/login.html:23
+msgid "Parola :"
+msgstr "Passwort"
+
+#: templates/login.html:26
+msgid "Login"
+msgstr "Anmeldung"
+
+#: templates/register.html:19
+msgid "Username :"
+msgstr "Nutzername"
+
+#: templates/register.html:23
+msgid "Email :"
+msgstr "Email"
+
+#: templates/register.html:27
+msgid "Password :"
+msgstr "Passwort"
+
+#: templates/register.html:30
+msgid "Register"
+msgstr "Registrieren"
+

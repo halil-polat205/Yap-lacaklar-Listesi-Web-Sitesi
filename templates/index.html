@@ -1,0 +1,132 @@
+<!DOCYTYPE html>
+<html lang = "tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>{{_("Yapılacaklar Listesi")}}</title>
+    
+</head>
+<body style="background-color: #e6f7ff">
+    <form action="/add" method="post">
+        <div style="margin-top: 100px" class="container">
+            <div class="fixed-top">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4">{{_("Yeni Ekle")}}</h5>
+                        <span class="text-muted">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">{{_("Başlık Giriniz")}}</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="{{_('Başlık Giriniz')}}" name="title">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">{{_("İçerik Giriniz")}}</label>
+                                <textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder="{{_('İçerik Giriniz')}}" name="content"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">{{_("Ekle")}}</button>
+                            
+                         
+
+    </form>
+                        </span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-light bg-light" >
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    </button>
+                    <center>
+                        <div class="float-xl-right" style="margin-left: 800px"><div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{_("Choose your language")}}
+                        </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ url_for('change_lang' ,lang = 'tr') }}">{{_("Turkısh")}}</a>
+                                <a class="dropdown-item"href="{{ url_for('change_lang' ,lang = 'de') }}">{{_("German")}}</a>
+                                <a class="dropdown-item"href="{{ url_for('change_lang' ,lang = 'ar') }}">{{_("Arabic")}}</a>
+                                <a class="dropdown-item"href="{{ url_for('change_lang' ,lang = 'en') }}">{{_("English")}}</a>
+                            </div>
+                        </div>
+                    </center>
+
+                            <div class="float-xl-right">
+                                <button style="margin-right: 5px" type="button" class="btn btn-outline-info"><a href="{{url_for('login')}}">{{_("Login")}}</a></button>
+                                <button style="margin-right: 5px" type="button" class="btn btn-outline-info"><a href="/logout">{{_("Logout")}}</a></button>
+                                    
+                                <button type="button" class="btn btn-outline-success"><a href="/register">{{_("Register")}}</a></button>
+                            </div>
+                </span>
+                </nav>
+
+            </div>
+
+            <img src="{{url_for('static', filename='logo2.jpg')}}" width="100" height="100" />
+            <h3 style="font-family:cursive;">{{_("Yapılacaklar Listesi")}}</h3>
+            {% for user in users: %}
+                <p>{{_("Hoşgeldin")}} {{user.username}}</p>
+            {% endfor %}  
+            <hr>
+            
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">{{_("Başlık")}}</th>
+                <th scope="col">{{_("İçerik")}}</th>
+                <th scope="col">{{_("Durum")}}</th>
+                <th scope="col">{{_("Tamamla")}}</th>
+                <th scope="col">{{_("Sil")}}</th>
+                <th scope="col">{{_("Önemli İşaretle")}}</th>
+                    
+            </tr>
+            
+            {% if todos == []: %}
+                <div class="alert alert-warning" role="alert">{{_("Henüz Yapılacak Eklemediniz Üstteki Menüden Ekleyebilirsiniz...")}}</div>
+            {% else: %}
+                {% for todo in todos %}
+                    <tr>
+                        <td scope="row">{{todo.id}}</td>
+                        
+                        {% if todo.Complete == True: %}
+                            <td><del>{{todo.title}}</del></td>
+                            <td><del>{{todo.content}}</del></td>
+                            <td> {{_("Tamamlandı")}} </td>
+                        {% else: %}
+                            {% if todo.İmportant == True: %}
+                                <td><font style="color: red">{{todo.title}}</font></td>
+                                <td><font style="color: red">{{todo.content}}</font></td>
+                                <td> {{_("Tamamlanmadı")}} </td>
+                            {% else: %}
+                                <td>{{todo.title}}</td>
+                                <td>{{todo.content}}</td>
+                                <td> {{_("Tamamlanmadı")}}</td>
+                            {% endif %}
+                        {% endif %}
+                        <td><a href="/Complete/{{todo.id}}" class="btn btn-success">{{_("Tamamla")}}</a></td>
+                        <td><a href="/Delete/{{todo.id}}" class="btn btn-danger">{{_("Sil")}} </a></td>
+                        <td><a href="/İmportant/{{todo.id}}" class="btn btn-warning">{{_("Önemli İşaretle")}}</a></td>
+   
+                    </tr>
+                {% endfor %}
+            {% endif %}
+
+        </thead>
+        <tbody>
+                
+        </tbody>
+    </table>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
